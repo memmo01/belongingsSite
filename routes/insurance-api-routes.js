@@ -7,7 +7,7 @@ module.exports = function(app){
 	//GET Route to display all user insurance
 	app.get("/api/insurance", function(req, res){
 		db.Insurance.findAll({}).then(function(insurance){
-			res.json(dbInsurance);
+			res.json(insurance);
 		});
 	});
 
@@ -26,7 +26,7 @@ module.exports = function(app){
 
 		}).then(function(insurance){
 			
-			res.json(dbInsurance);
+			res.json(insurance);
 		});
 	});
 	
@@ -46,7 +46,7 @@ module.exports = function(app){
 		{
 			where: {id: req.body.id}
 		}).then(function(insurance){
-			res.json(dbInsurance);
+			res.json(insurance);
 		});
 	});
 
@@ -55,7 +55,7 @@ module.exports = function(app){
 		db.Insurance.destroy({
 			where: {id: req.params.id}
 		}).then(function(insurance){
-			res.json(dbInsurance);
+			res.json(insurance);
 		});
 	});
 }

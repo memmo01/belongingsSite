@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Belongings</title>
+	<title>Insurance</title>
 	<!-- Bootstrap -->
 	<!-- Latest compiled and minified CSS -->
 
@@ -47,7 +47,7 @@
 	<div>
 		<nav id="nb" class="navbar navbar-default">
 			<div class="container-fluid">
-			<a href="/insurance">view Insurance information</a>
+			<a href="/home">view Asset information</a>
 
 				<!-- <a class="navbar-brand" href="#"></a> -->
 
@@ -71,7 +71,7 @@
 			<br>
 			<br>
 			<!-- <span id="plus" class="glyphicon glyphicon-plus" aria-hidden="true" data-toggle="modal" data-target="#createItemForm"></span> -->
-			<button id="add-item" aria-hidden="true" data-toggle="modal" data-target="#createItemForm">Add Asset</button>
+			<button id="add-insurance aria-hidden="true" data-toggle="modal" data-target="#createInsuranceForm">Add Insurance</button>
 			<!-- <h3><strong>Click Below To Add Belongings</strong></h3> -->
 		</div>
 
@@ -83,11 +83,11 @@
 
 			<div class="row">
 				<div class="col-sm-6 col-md-3">
-					<span class="proper" aria-hidden="true" data-toggle="modal" data-target="#showPropertyInfo">
+					<span class="auto" aria-hidden="true" data-toggle="modal" data-target="#showAutoInsurInfo">
 						<div class="thumbnail">
-							<img src="../public/Images/property.jpg" alt="properties">
+							<img src="../public/Images/autoinsur.png" alt="properties">
 							<div class="caption">
-								<h4>Properties</h4>
+								<h4>Auto Insurance</h4>
 							</div>
 						</div>
 					</span>
@@ -96,11 +96,11 @@
 
 				<div class="col-sm-6 col-md-3">
 					<!-- THIS IS WHERE THE MODAL BUTTON IS for car -->
-					<span class="car" aria-hidden="true" data-toggle="modal" data-target="#showCarInfo">
+					<span class="home" aria-hidden="true" data-toggle="modal" data-target="#showHomeInsurInfo">
 					<div class="thumbnail">
-						<img src="../public/Images/car.jpg" alt="car">
+						<img src="../public/Images/homeowners-insurance.jpg" alt="car">
 						<div class="caption">
-							<h4>Vehicles</h4>
+							<h4>Home Insurance</h4>
 						</div>
 					</div>
 					</span>
@@ -112,11 +112,11 @@
 
 
 				<div class="col-sm-6 col-md-3">
-					<span class="electronics" aria-hidden="true" data-toggle="modal" data-target="#showElectronicsInfo">
+					<span class="life" aria-hidden="true" data-toggle="modal" data-target="#showLifeInsurInfo">
 					<div class="thumbnail">
-						<img src="../public/Images/electronics.jpg" alt="electronics">
+						<img src="../public/Images/life-insurance.jpg" alt="electronics">
 						<div class="caption">
-							<h4>Electronics</h4>
+							<h4>Life Insurance</h4>
 						</div>
 					</div>
 					</span>
@@ -124,73 +124,30 @@
 
 
 				<div class="col-sm-6 col-md-3">
-					<span class="appliances" aria-hidden="true" data-toggle="modal" data-target="#showApplicanesInfo">
+					<span class="health" aria-hidden="true" data-toggle="modal" data-target="#showHealthInsurInfo">
 					<div class="thumbnail">
-						<img src="../public/Images/appliances.jpg" alt="appliances">
+						<img src="../public/Images/health-insurance.jpg" alt="appliances">
 						<div class="caption">
-							<h4>Appliances</h4>
+							<h4>Health Insurance</h4>
 						</div>
 					</div>
 				</span>
 				</div>
 
 
-				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<span class="antiques" aria-hidden="true" data-toggle="modal" data-target="#showAntiquesInfo">
-					<div class="thumbnail">
-						<img src="../public/Images/antiques.jpg" alt="vase">
-						<div class="caption">
-							<h4>Antiques</h4>
-						</div>
-					</div>
-					</span>
-					</div>
+				
 
 
 
-					<div class="col-sm-6 col-md-3">
-						<span class="clothing" aria-hidden="true" data-toggle="modal" data-target="#showClothingInfo">
-					<div class="thumbnail">
-						<img src="../public/Images/clothing.jpg" alt="closet">
-						<div class="caption">
-							<h4>Clothing</h4>
-						</div>
-					</div>
-					</span>
-					</div>
 
-
-					<div class="col-sm-6 col-md-3">
-						<span class="jewelry" aria-hidden="true" data-toggle="modal" data-target="#showJewelryInfo">
-	    		<div class="thumbnail">
-	      			<img src="../public/Images/jewelry.png" alt="jewelry">
-	      			<div class="caption">
-	        		<h4>Jewelry</h4>
-	        		</div>
-	    		</div>
-	  		</div>
-
-
-	  		<div class="col-sm-6 col-md-3">
-				  <span class="tools" aria-hidden="true" data-toggle="modal" data-target="#showToolsInfo">
-	    		<div class="thumbnail">
-	      			<img src="../public/Images/tools.jpg" alt="tools">
-	      			<div class="caption">
-	        		<a data-target="#blah"><h4>Tools</h4></a>
-	        		</div>
-	    		</div>
-	  		</div>
-	</div>
-
-	<div class="modal" id="showToolsInfo" tabindex="-1" role="dialog" aria-labelledby="showToolsInfo">
+	<div class="modal" id="showAutoInsurInfo" tabindex="-1" role="dialog" aria-labelledby="showAutoInsurInfo">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				
 				<!-- this is the header title for the create an item form pop-up modal-->
 				
 				<div class="modal-header">
-					Tool Assets
+					Auto Insurance
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					</div>
 
@@ -200,7 +157,7 @@
 						<center>
 							<!-- this is form for create an item -->
 
-<div class="tool-container">
+<div class="auto-insur-container">
 					</div>
 							
 						</center>
@@ -212,13 +169,13 @@
 		</div>
 
 
-			<div class="modal" id="showPropertyInfo" tabindex="-1" role="dialog" aria-labelledby="showPropertyInfo">
+			<div class="modal" id="showHomeInsurInfo" tabindex="-1" role="dialog" aria-labelledby="showHomeInsurInfo">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				
 				<!-- this is the header title for the create an item form pop-up modal-->
 				<div class="modal-header">
-					Property Assets
+					Homeowners Insurance
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					</div>
 
@@ -228,7 +185,7 @@
 						<center>
 							<!-- this is form for create an item -->
 
-<div class="property-container">
+<div class="homeowners-insur-container">
 					</div>
 							<div class="items">
 						</div>	
@@ -241,13 +198,13 @@
 		</div>
 
 
-		<div class="modal" id="showCarInfo" tabindex="-1" role="dialog" aria-labelledby="showCarInfo">
+		<div class="modal" id="showLifeInsurInfo" tabindex="-1" role="dialog" aria-labelledby="showLifeInsurInfo">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				
 				<!-- this is the header title for the create an item form pop-up modal-->
 				<div class="modal-header">
-					Car Assets
+					Life Insurance
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					</div>
 
@@ -256,7 +213,7 @@
 
 						<center>
 							<!-- this is form for create an item -->
-<div class="car-container">
+<div class="life-insur-container">
 					</div>
 							<div class="items">
 						</div>	
@@ -270,13 +227,13 @@
 
 
 
-			<div class="modal" id="showElectronicsInfo" tabindex="-1" role="dialog" aria-labelledby="showElectronicsInfo">
+			<div class="modal" id="showHealthInsurInfo" tabindex="-1" role="dialog" aria-labelledby="showHealthInsurInfo">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				
 				<!-- this is the header title for the create an item form pop-up modal-->
 				<div class="modal-header">
-					Electronic Assets
+					Health Insurance
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					</div>
 
@@ -284,7 +241,7 @@
 
 						<center>
 							<!-- this is form for create an item -->
-<div class="electronics-container">
+<div class="health-insur-container">
 					</div>
 <div class="items">
 						</div>	
@@ -298,124 +255,7 @@
 		</div>
 
 
-		<div class="modal" id="showApplicanesInfo" tabindex="-1" role="dialog" aria-labelledby="showApplicanesInfo">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				
-				<!-- this is the header title for the create an item form pop-up modal-->
-				<div class="modal-header">
-					Appliance Assets
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					</div>
-
-					<!-- this is the body where the forms lies within the form pop-up modal -->
-					<div class="modal-body">
-
-						<center>
-							<!-- this is form for create an item -->
-
-<div class="appliances-container">
-					</div>
-							<div class="items">
-						</div>	
-						</center>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<div class="modal" id="showAntiquesInfo" tabindex="-1" role="dialog" aria-labelledby="showAntiquesInfo">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				
-				<!-- this is the header title for the create an item form pop-up modal-->
-				<div class="modal-header">
-					Antique Assets
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					</div>
-
-					<!-- this is the body where the forms lies within the form pop-up modal -->
-					<div class="modal-body">
-
-						<center>
-							<!-- this is form for create an item -->
-
-<div class="antiques-container">
-					</div>
-							<div class="items">
-						</div>	
-						</center>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<div class="modal" id="showClothingInfo" tabindex="-1" role="dialog" aria-labelledby="showClothingInfo">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				
-				<!-- this is the header title for the create an item form pop-up modal-->
-				<div class="modal-header">
-					Clothing Assets
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					</div>
-
-					<!-- this is the body where the forms lies within the form pop-up modal -->
-					<div class="modal-body">
-
-						<center>
-							<!-- this is form for create an item -->
-
-
-						<div class="clothing-container">
-
-					</div>
-						<div class="items">
-						</div>	
-						</center>
-
-					
-				</div>
-</div>
-			</div>
-		</div>
-
-			<div class="modal" id="showJewelryInfo" tabindex="-1" role="dialog" aria-labelledby="showJewelryInfo">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				
-				<!-- this is the header title for the create an item form pop-up modal-->
-				<div class="modal-header">
-					Jewelry Assets
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					</div>
-
-					<!-- this is the body where the forms lies within the form pop-up modal -->
-					<div class="modal-body">
-
-						<center>
-							<!-- this is form for create an item -->
-
-<div class="jewelry-container">
-					</div>
-							<div class="items">
-						</div>	
-							
-						</center>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<div class="modal" id="createItemForm" tabindex="-1" role="dialog" aria-labelledby="createItemForm">
+		<div class="modal" id="createInsuranceForm" tabindex="-1" role="dialog" aria-labelledby="createInsuranceForm">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				
@@ -423,71 +263,57 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        		
-	        			<h4>Create an Item</h4>
+	        			<h5>Add Insurance</h5>
 	        		
 				</div>
 				
 				<!-- this is the body where the forms lies within the form pop-up modal -->
 				<div class="modal-body">
-					<div id="createItemForm" class="row">
+					<div id="insuranceInfoForm" class="row">
 						<center>
 						<!-- this is form for create an item -->
-						<form id = "asset-form">
+						<form id = "insurance-form">
 
 							<div class="form-group">
-								<label for="itemName">
+								<label for="insur_type">
 								Category</label>
 								<select name="category" id="category">
-									<option value="Appliances">Appliances</option>
-									<option value="Electronics">Electronics</option>
-									<option value="Tools">Tools</option>
-									<option value="Vehicles">Vehicles</option>
-									<option value="Antiques">Antiques</option>
-									<option value="Clothing">Clothing</option>
-									<option value="Jewelry">Jewelry</option>
-									
-									<option value="Other">Other</option>
+									<option value="Auto">Auto Insurance</option>
+									<option value="homeowners">Homeowners Insurance</option>
+									<option value="Life">Life Insurance</option>
+									<option value="health">Health Insurance</option>
+								
 								</select>
 							</div>
 							
 				    		<div class="form-group">
-								<label for="itemName">Item Name</label>
-								<input class="form-control" id="itemName" placeholder="itemName">
+								<label for="Company">Company Name</label>
+								<input class="form-control" id="companyName" placeholder="Company">
 							</div>
 								    
 							<div class="form-group">
-								<label for="Manufacturer/ Brand">Make</label>
-								<input class="form-control" id="make" placeholder="Manufacturer/ Brand">
+								<label for="phone_num">Phone Number</label>
+								<input class="form-control" id="phoneNum" placeholder="phone_num">
 							</div>
 
 							<div class="form-group">
-								<label for="modelNumber">Model</label>
-								<input class="form-control" id="model" placeholder="Model">
+								<label for="agent">Agent</label>
+								<input class="form-control" id="agent" placeholder="Agent">
 							</div>
 							
 							<div class="form-group">
-								<label for="serialNumber">Serial Number</label>
-								<input class="form-control" id="serialNumber" placeholder="serialNumber">
+								<label for="policy_num">Policy Number</label>
+								<input class="form-control" id="policyNum" placeholder="Policy Number">
 							</div>
 								   
 							<div class="form-group">
-								<label for="price">Price</label>
-								<input class="form-control" id="price" placeholder="price">
-							</div>
-
-							<div class="form-group">
-								<label for="datePurchased">Date Purchased</label>
-								<input class="form-control" id="date" placeholder="YYYY-MM-DD">
+								<label for="startDate">Start Date</label>
+								<input class="form-control" id="startDate" placeholder="YYYY-MM-DD">
 							</div>
 
 							<div class="form-group">
 								<label for="addInfo">Additional Information</label>
-								<textarea class="form-control" rows="3" id="itemInfo"></textarea>
-							</div>
-
-								<div class="form-group">
-								<label for="inherit">Who Inherits</label>
-								<input class="form-control" id="updateinherit" placeholder="inherit">
+								<textarea class="form-control" rows="3" id="insurInfo"></textarea>
 							</div>
 
 							<div class="form-group">
@@ -603,7 +429,7 @@
 	
 
 	<script type="text/javascript" src="../public/js/belongings.js"></script>
-	<script type="text/javascript" src="../public/js/insurance.js"></script>
+	<script type="text/javascript" src="../public/js/insuranceTable.js"></script>
 </body>
 
 </html>

@@ -16,6 +16,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../views/index.html"));
   });
 
+ app.get("/insurance", function(req, res) {
+    // If the user already has an account send them to the junkDrawer page    
+    res.sendFile(path.join(__dirname + "/../views/insurance.html"));
+  });
+
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the junkDrawer page
     

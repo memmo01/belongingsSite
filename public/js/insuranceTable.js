@@ -168,6 +168,7 @@ $(document).ready(function(){
   //function to add insurance to the database
   function insertInsurance(event) {
     event.preventDefault();
+    alert("worked");
 
     var insurance = {
       insur_type: $("#insur_type").val().trim(),
