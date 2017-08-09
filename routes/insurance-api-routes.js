@@ -15,7 +15,7 @@ module.exports = function(app){
 	app.post("/api/insurance", function(req,res){
 		db.Insurance.create({
 
-			insur_type: req.body.insure_type,
+			insur_type: req.body.insur_type,
 			company: req.body.company,
 			phone_num: req.body.phone_num,
 			agent: req.body.agent,
@@ -34,7 +34,7 @@ module.exports = function(app){
 	app.put("/api/insurance", function(req,res){
 		db.Insurance.update(
 		{
-			insur_type: req.body.insure_type,
+			insur_type: req.body.insur_type,
 			company: req.body.company,
 			phone_num: req.body.phone_num,
 			agent: req.body.agent,
