@@ -1,0 +1,85 @@
+#index-body{
+	background-image: url("../Images/pearls.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position:fixed;
+   }
+
+.nav-content-index{
+	width:100%;
+	background-color:#343f49;
+	position:fixed;
+	opacity:.68;
+	display: inline-flex;
+	
+
+}
+
+.nav-labels{
+	margin-left:600px;
+	line-height: 75px;
+
+}
+.nav-labels a{
+text-decoration:none; 
+display:inline-flex;
+padding-right:50px;
+font-size:15px;
+color:white;
+font-family: 'Bellefair', serif;
+
+}
+
+.nav-labels a:hover {
+font-weight:bold;
+}
+
+.front-intro{
+	
+	height:800px;
+	width:600px;
+
+
+}
+
+.front-intro-1{
+font-size:40.3px;
+padding-top:322px;
+padding-left:40px;
+text-align:center;
+color:black;
+font-family: 'Bellefair', serif;
+
+
+
+
+}
+
+.logo-icon{
+	padding:18px 0 10px 0;
+	margin-left:60px;
+}
+
+.create-button{
+	margin-top:15px;
+}
+
+#register-button{
+ color: white;
+    font-size: 17px;
+    background-color: #8b0000;
+    font-family: 'Bellefair', sans-serif;
+    opacity:.70;
+}
+
+#login-button{
+	 color: white;
+    font-size: 17px;
+    background-color: #8b0000;
+    font-family: 'Bellefair', sans-serif;
+    opacity:.70;
+
+}
+

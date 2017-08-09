@@ -1,0 +1,273 @@
+/*about.html*/
+#about-body{
+background-image: url("../Images/antique-2.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+position:fixed;
+height:500px;
+opacity:.95;
+}
+.about-middle{
+background-color:white;
+height:295px;
+margin-top:375px;
+padding-top:65px;
+}
+.about-bio{
+font-size:22px;
+text-align:center;
+width:80%;
+margin-left:10%;
+font-family: 'Mate SC', serif;
+}
+
+/*TEAM HTML PAGE CSS*/
+
+#team-body{
+background-image: url("../Images/wall.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+position:fixed;
+height:500px;
+opacity:.95;
+}
+
+.about-content {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+.about-story {
+    text-align: center;
+    padding-top: 20px;
+    width: 700px;
+    height: 120px;
+    margin-left: 27%;
+    font-size: 22px;
+    display: inline-flex;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.team-container-about {
+    padding-top: 5px;
+}
+.card-container-bios {
+    display: inline-flex;
+    padding-left: 18%;
+    padding-top:15px;
+}
+.card-lisa-container{
+  cursor: pointer;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+  width: 250px;
+  margin-right:10px;
+}
+.card-lisa{
+  height: 250px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 250px;
+}
+.card-lisa:hover {
+  transform: rotateY(180deg);
+}
+.front-lisa{
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  
+}
+.back-lisa{
+  background: #eaeaed;
+  color: #0087cc;
+  width:250px;
+  height:250px;
+  padding-top:50px;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-size:24px;
+}
+.card-ed-container{
+  cursor: pointer;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+  width: 250px;
+  margin-right:10px;
+}
+.card-ed{
+  height: 250px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 250px;
+}
+.card-ed:hover {
+  transform: rotateY(180deg);
+}
+.front-ed{
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+ 
+}
+.back-ed{
+  background: #eaeaed;
+  color: #0087cc;
+  width:250px;
+  height:250px;
+  padding-top:50px;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-size:24px;
+}
+.card-michael-container{
+  cursor: pointer;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+  width: 250px;
+  margin-right:10px;
+}
+.card-michael{
+  height: 250px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 250px;
+}
+.card-michael:hover {
+  transform: rotateY(180deg);
+}
+.front-michael{
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+
+}
+.back-michael{
+  background: #eaeaed;
+  color: #0087cc;
+  width:250px;
+  height:250px;
+  padding-top:50px;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-size:24px;
+}
+.card-laura-container{
+  cursor: pointer;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+  width: 250px;
+  margin-right:10px;
+}
+.card-laura{
+  height: 250px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 250px;
+}
+.card-laura:hover {
+  transform: rotateY(180deg);
+}
+.front-laura{
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+ 
+}
+.back-laura{
+  background: #eaeaed;
+  color: #0087cc;
+  width:250px;
+  height:250px;
+  padding-top:50px;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-size:24px;
+}
+
+
+/*CONTACT US PAGE CSS.............*/
+
+h4 {
+color: rgb(255,86,114);
+}
+#nb {
+opacity: 0.4;
+}
+.contact-blip {
+color: rgb(255,86,114);
+}
+.contact-title {
+font-family: georgia;
+}
+.jumbotron {
+text-align: center;
+background-color: transparent;
+background: rgba(255, 255, 255, 0.2);
+}
+#bkimage {
+background-image: url("../Images/phone.jpeg");
+}
+
+
+
+/*itemsForm CSS STYLING PAGE*/
+h4 {
+  color: rgb(255,86,114);
+}
+
+
+#form-text {
+  font-family: georgia;
+  font-size: 20px;
+}
+
+
+/*Signup HTML CSS STYLING*/
+ #signup-image{
+background-image: url("../Images/shredbox.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+
+
+ }
+
+#landingPageTitle{
+margin-top:20px;
+margin-bottom:50px;
+
+}

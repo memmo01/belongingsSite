@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Belongings</title>
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+
+
+
+	<!-- CSS Page -->
+	<link rel="stylesheet" type="text/css" href="../public/CSS/belongings.css">
+
+
+
+
+	<!-- FONTs -->
+	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|The+Girl+Next+Door" rel="stylesheet">
+
+
+
+
+	<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	    crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	    crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	    crossorigin="anonymous"></script>
+	<!-- /Bootstrap -->
+
+
+</head>
+
+<body style="background-color: rgb(222,222,232);">
+
+
+
+
+
+	<div>
+		<nav id="nb" class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<!-- <a class="navbar-brand" href="#"></a> -->
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/team">Team</a></li>
+					<li><a href="/">Log Out</a></li>
+				</ul>
+
+
+
+			</div>
+		</nav>
+
+
+
+
+		<div class="jumbotron">
+			<img id="logo" alt="eNumLogo" src="../public/Images/eNumLogo4.png">
+			<br>
+			<br>
+			<!-- <span id="plus" class="glyphicon glyphicon-plus" aria-hidden="true" data-toggle="modal" data-target="#createItemForm"></span> -->
+			<button id="add-item" aria-hidden="true" data-toggle="modal" data-target="#createItemForm">Add Item</button>
+			<h3><strong>Click Below To Add Belongings</strong></h3>
+		</div>
+
+
+
+
+
+		<div id="polaroid" class="container-fluid">
+
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<span class="proper" aria-hidden="true" data-toggle="modal" data-target="#showPropertyInfo">
+						<div class="thumbnail">
+							<img src="../public/Images/property.jpg" alt="properties">
+							<div class="caption">
+								<h4>Properties</h4>
+							</div>
+						</div>
+					</span>
+				</div>
+
+
+				<div class="col-sm-6 col-md-3">
+					<!-- THIS IS WHERE THE MODAL BUTTON IS for car -->
+					<span class="car" aria-hidden="true" data-toggle="modal" data-target="#showCarInfo">
+					<div class="thumbnail">
+						<img src="../public/Images/car.jpg" alt="car">
+						<div class="caption">
+							<h4>Vehicles</h4>
+						</div>
+					</div>
+					</span>
+				</div>
+
+
+
+
+
+
+				<div class="col-sm-6 col-md-3">
+					<span class="electronics" aria-hidden="true" data-toggle="modal" data-target="#showElectronicsInfo">
+					<div class="thumbnail">
+						<img src="../public/Images/electronics.jpg" alt="electronics">
+						<div class="caption">
+							<h4>Electronics</h4>
+						</div>
+					</div>
+					</span>
+				</div>
+
+
+				<div class="col-sm-6 col-md-3">
+					<span class="appliances" aria-hidden="true" data-toggle="modal" data-target="#showApplicanesInfo">
+					<div class="thumbnail">
+						<img src="../public/Images/appliances.jpg" alt="appliances">
+						<div class="caption">
+							<h4>Appliances</h4>
+						</div>
+					</div>
+				</span>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-6 col-md-3">
+						<span class="antiques" aria-hidden="true" data-toggle="modal" data-target="#showAntiquesInfo">
+					<div class="thumbnail">
+						<img src="../public/Images/antiques.jpg" alt="vase">
+						<div class="caption">
+							<h4>Antiques</h4>
+						</div>
+					</div>
+					</span>
+					</div>
+
+
+
+					<div class="col-sm-6 col-md-3">
+						<span class="clothing" aria-hidden="true" data-toggle="modal" data-target="#showClothingInfo">
+					<div class="thumbnail">
+						<img src="../public/Images/clothing.jpg" alt="closet">
+						<div class="caption">
+							<h4>Clothing</h4>
+						</div>
+					</div>
+					</span>
+					</div>
+
+
+					<div class="col-sm-6 col-md-3">
+						<span class="jewelry" aria-hidden="true" data-toggle="modal" data-target="#showJewelryInfo">
+	    		<div class="thumbnail">
+	      			<img src="../public/Images/jewelry.png" alt="jewelry">
+	      			<div class="caption">
+	        		<h4>Jewelry</h4>
+	        		</div>
+	    		</div>
+	  		</div>
+
+
+	  		<div class="col-sm-6 col-md-3">
+				  <span class="tools" aria-hidden="true" data-toggle="modal" data-target="#showToolsInfo">
+	    		<div class="thumbnail">
+	      			<img src="../public/Images/tools.jpg" alt="tools">
+	      			<div class="caption">
+	        		<a data-target="#blah"><h4>Tools</h4></a>
+	        		</div>
+	    		</div>
+	  		</div>
+	</div>
+
+	<div class="modal" id="showToolsInfo" tabindex="-1" role="dialog" aria-labelledby="showToolsInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				
+				<div class="modal-header">
+					hello there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+
+						<center>
+							<!-- this is form for create an item -->
+
+<div class="tool-container">
+					</div>
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+			<div class="modal" id="showPropertyInfo" tabindex="-1" role="dialog" aria-labelledby="showPropertyInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hellow there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showPropertyInfo
+						<center>
+							<!-- this is form for create an item -->
+
+<div class="property-container">
+					</div>
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="showCarInfo" tabindex="-1" role="dialog" aria-labelledby="showCarInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hello there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showCarInfo
+						<center>
+							<!-- this is form for create an item -->
+<div class="car-container">
+					</div>
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+			<div class="modal" id="showElectronicsInfo" tabindex="-1" role="dialog" aria-labelledby="showElectronicsInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hellow there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showElectronicsInfo
+						<center>
+							<!-- this is form for create an item -->
+<div class="electronics-container">
+					</div>
+
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="showApplicanesInfo" tabindex="-1" role="dialog" aria-labelledby="showApplicanesInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hello there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showApplicanesInfo
+						<center>
+							<!-- this is form for create an item -->
+
+<div class="appliances-container">
+					</div>
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="showAntiquesInfo" tabindex="-1" role="dialog" aria-labelledby="showAntiquesInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hello there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showAntiquesInfo
+						<center>
+							<!-- this is form for create an item -->
+
+<div class="antiques-container">
+					</div>
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="modal" id="showClothingInfo" tabindex="-1" role="dialog" aria-labelledby="showClothingInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hello there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showClothingInfo
+						<center>
+							<!-- this is form for create an item -->
+
+
+						<div class="clothing-container">
+					</div>
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+			<div class="modal" id="showJewelryInfo" tabindex="-1" role="dialog" aria-labelledby="showJewelryInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					hellw there is text here now
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+
+					<!-- this is the body where the forms lies within the form pop-up modal -->
+					<div class="modal-body">
+showJewelryInfo
+						<center>
+							<!-- this is form for create an item -->
+
+<div class="jewelry-container">
+					</div>
+							
+							
+						</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="createItemForm" tabindex="-1" role="dialog" aria-labelledby="createItemForm">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		
+	        			<h4>Create an Item</h4>
+	        		
+				</div>
+				
+				<!-- this is the body where the forms lies within the form pop-up modal -->
+				<div class="modal-body">
+					<div id="createItemForm" class="row">
+						<center>
+						<!-- this is form for create an item -->
+						<form id = "asset-form">
+
+							<div class="form-group">
+								<label for="itemName">
+								Category</label>
+								<select name="category" id="category">
+									<option value="Appliances">Appliances</option>
+									<option value="Electronics">Electronics</option>
+									<option value="Tools">Tools</option>
+									<option value="Vehicles">Vehicles</option>
+									<option value="Antiques">Antiques</option>
+									<option value="Clothing">Clothing</option>
+									<option value="Jewelry">Jewelry</option>
+									
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							
+				    		<div class="form-group">
+								<label for="itemName">Item Name</label>
+								<input class="form-control" id="itemName" placeholder="itemName">
+							</div>
+								    
+							<div class="form-group">
+								<label for="Manufacturer/ Brand">Make</label>
+								<input class="form-control" id="make" placeholder="Manufacturer/ Brand">
+							</div>
+
+							<div class="form-group">
+								<label for="modelNumber">Model</label>
+								<input class="form-control" id="model" placeholder="Model">
+							</div>
+							
+							<div class="form-group">
+								<label for="serialNumber">Serial Number</label>
+								<input class="form-control" id="serialNumber" placeholder="serialNumber">
+							</div>
+								   
+							<div class="form-group">
+								<label for="price">Price</label>
+								<input class="form-control" id="price" placeholder="price">
+							</div>
+
+							<div class="form-group">
+								<label for="datePurchased">Date Purchased</label>
+								<input class="form-control" id="date" placeholder="YYYY-MM-DD">
+							</div>
+
+							<div class="form-group">
+								<label for="addInfo">Additional Information</label>
+								<textarea class="form-control" rows="3" id="itemInfo"></textarea>
+							</div>
+
+								<div class="form-group">
+								<label for="inherit">Who Inherits</label>
+								<input class="form-control" id="updateinherit" placeholder="inherit">
+							</div>
+
+							<div class="form-group">
+								<label for="image">Image</label>
+								<input class="form-control" id="image" placeholder="image">
+							</div>
+
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+				    	</form>
+				    	</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+		
+	
+
+
+	
+
+	<script type="text/javascript" src="../public/js/belongings.js"></script>
+</body>
+
+</html>

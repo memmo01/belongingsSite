@@ -1,0 +1,173 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+thead {
+	font-weight: bolder;
+}
+
+h3 {
+	
+	font-family: 'The Girl Next Door', cursive;
+}
+
+#nb {
+	opacity: 0.4;
+}
+
+
+.jumbotron {
+	text-align: center;
+	background-color: transparent;
+}
+
+#polaroid {
+	font-family: 'Homemade Apple', cursive;
+	color: rgb(53,112,232);
+}
+
+/* this is styling the div which pops up when the create account button is clicked on the homepage */
+#createAccountForm {
+	display: none;	
+	background-color: #BADA55;
+	width: 100%;
+	height: 400px;
+}
+
+/* this is styling the title for the Project Name */
+#landingPageTitle {
+	font-size: 50px;
+	margin-top: 15%;
+}
+
+#projectName {
+	width: 100%;
+	height: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* this section is styling the Navigation Bar */
+#navBar{
+	width: 100%;
+	height: 500px;
+	padding: 10px;
+}
+
+.nav a {
+	color: #000;
+}
+
+/* this is styling the alphabet search bar within the items tab */
+.alphabet {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.alphabet a {
+	text-decoration: none;
+	color: #998b70;
+}
+
+.alphabet a:hover {
+	color: #BADA55;
+}
+
+#alphabetList {
+	width: 70%;
+	margin: 20px;
+	overflow: scroll;
+}
+
+/* this is styling for the insurance info data */
+.panel a {
+	text-decoration: none;
+	color: #000;
+}
+
+.panel a:hover {
+	color: #BADA55;
+}
+
+/* this is styling for the itemList Table */
+.itemEdit {
+	margin-right: 5px;
+}
+
+.itemRemove:hover {
+	color: red;
+}
+
+.itemEdit:hover {
+	color: purple;
+}
+
+#itemList {
+	padding: 20px;
+	width: 80%;
+}
+
+.itemRowClick:hover {
+	color: #BADA55;
+}
+
+#manageLinks {
+	position: absolute;
+	left: 80%;
+}
+
+#itemDetail {
+	width: 100%;
+	height: 500px;
+	z-index: 2;
+	position: fixed;
+	bottom: 0;
+	display: none;
+	overflow: scroll;
+	background-color: #fff;
+}
+
+.itemStyle {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	align-content: center;
+	z-index: 3;
+}
+
+/* this is styling the layout of the details page */
+#closeItemDetail {
+	position: absolute;
+	right: 1%;
+	top: 1%;
+}
+
+/* this is styling the various forms found within our page */
+.insuranceRemove {
+	margin-left: 8px;
+}
+
+#insuranceInfoForm {
+	padding: 10px;
+	overflow: scroll;
+}
+
+#createItemForm {
+	padding: 10px;
+	overflow: scroll;
+}
+
+#accordion {
+	margin-top: 20px;
+	width: 80%;
+}
+
+/* this is positioning the plus sign prompting the create forms */
+#plus {
+	margin-right: 10px;
+}

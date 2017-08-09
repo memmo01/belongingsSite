@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<!-- linking the CSS pages -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/belongings.css">
+<!-- linking the JS pages -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	
+</head>
+<body>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- this is the title of the project which shows up on the top of the page -->
+	<div  id="projectName" class="row">
+		<center><h1>eNumerate</h1></center>
+	</div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- this is the navigation bar for the profile, insurance info, and item list -->
+	<div id="navBar" class="row">
+	<a class="navbar-brand" href="/logout">
+        Logout
+      </a>
+		
+		<!-- tabs -->
+  		<ul class="nav nav-tabs" role="tablist">
+  			<!-- this is the profile tab -->
+  			<li role="presentation">
+  				<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+  					Profile
+  				</a>
+  			</li>
+
+  			<!-- this is the items tab -->
+  			<li role="presentation">
+  				<a href="#insurance" aria-controls="insurance" role="tab" data-toggle="tab">
+  					Insurance Info
+  				</a>
+  			</li>
+
+  			<!-- this is the items tab -->
+  			<li role="presentation">
+  				<a href="#items" aria-controls="items" role="tab" data-toggle="tab">
+  					Items
+  				</a>
+  			</li>
+
+  		</ul>
+
+  		<!-- Tab panes -->
+  		<div class="tab-content">
+  			<!-- this is the profile tab body -->
+			<div role="tabpanel" class="tab-pane" id="profile">
+			<center>
+			<br >
+				<h4 id="userEmail"></h4>
+				<br >
+			</center>
+			</div>
+
+			<!-- this is the insurance info tab body -->
+			<div role="tabpanel" class="tab-pane" id="insurance">
+				<center>
+				<!-- this is the collapse accordian for the existing insurance info -->
+				<div class="panel-group insurance-container" id="accordion" role="tablist" aria-multiselectable="true">
+					<!-- Insurance will populate here -->
+
+				</div>
+
+				<!-- Button trigger modal for add insurance info -->
+				<span class="glyphicon glyphicon-plus" aria-hidden="true" data-toggle="modal" data-target="#insuranceInfoForm"></span>
+				</center>
+			</div>
+
+			<!-- this is the items tab body-->
+    		<div role="tabpanel" class="tab-pane" id="items">
+    			<center>
+
+				<div>
+					<!-- Button trigger modal for create an Item -->
+					<span id="plus" class="glyphicon glyphicon-plus" aria-hidden="true" data-toggle="modal" data-target="#createItemForm"></span>
+			
+
+				</div>
+				</center>
+				
+				<br>
+
+				<!-- the display table for the item list on the items tab-->
+				<center>
+    			<table id="itemList" class="table">
+ 					<thead>
+ 						<td>Id</td>
+ 						<td>Item Name</td>
+ 					</thead>
+
+ 					<tbody class="asset-container">
+					<!--list of assets will populate here-->
+					</tbody>
+		
+				</table>
+				</center>
+
+    		</div>
+  		</div>
+
+	</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- this is the pop up for the item row clickable option -->
+<div id="itemDetail">
+	<span id="closeItemDetail" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+
+	<center>
+		<div class="items"></div>
+	</center>
+	
+</div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- this is the pop modal for the create an item form -->
+	<div class="modal" id="createItemForm" tabindex="-1" role="dialog" aria-labelledby="createItemForm">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<center>
+	        			<h4 class="modal-title" id="createItemForm">Create an Item</h4>
+	        		</center>
+				</div>
+				
+				<!-- this is the body where the forms lies within the form pop-up modal -->
+				<div class="modal-body">
+					<div id="createItemForm" class="row">
+						<center>
+						<!-- this is form for create an item -->
+						<form id = "asset-form">
+
+							<div class="form-group">
+								<label for="itemName">
+								Category</label>
+								<select name="category" id="category">
+									<option value="Appliances">Appliances</option>
+									<option value="Electronics">Electronics</option>
+									<option value="Tools">Tools</option>
+									<option value="Vehicles">Vehicles</option>
+									<option value="Antiques/Artworks">Antiques/ Artworks</option>
+									<option value="Clothing/Bags">Clothing/ Bags</option>
+									<option value="Jewerly/Watches">Jewerly/ Watches</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							
+				    		<div class="form-group">
+								<label for="itemName">Item Name</label>
+								<input class="form-control" id="itemName" placeholder="itemName">
+							</div>
+								    
+							<div class="form-group">
+								<label for="Manufacturer/ Brand">Make</label>
+								<input class="form-control" id="make" placeholder="Manufacturer/ Brand">
+							</div>
+
+							<div class="form-group">
+								<label for="modelNumber">Model</label>
+								<input class="form-control" id="model" placeholder="Model">
+							</div>
+							
+							<div class="form-group">
+								<label for="serialNumber">Serial Number</label>
+								<input class="form-control" id="serialNumber" placeholder="serialNumber">
+							</div>
+								   
+							<div class="form-group">
+								<label for="price">Price</label>
+								<input class="form-control" id="price" placeholder="price">
+							</div>
+
+							<div class="form-group">
+								<label for="datePurchased">Date Purchased</label>
+								<input class="form-control" id="date" placeholder="YYYY-MM-DD">
+							</div>
+
+							<div class="form-group">
+								<label for="addInfo">Additional Information</label>
+								<textarea class="form-control" rows="3" id="itemInfo"></textarea>
+							</div>
+
+								<div class="form-group">
+								<label for="inherit">Who Inherits</label>
+								<input class="form-control" id="updateinherit" placeholder="inherit">
+							</div>
+
+							<div class="form-group">
+								<label for="image">Image</label>
+								<input class="form-control" id="image" placeholder="image">
+							</div>
+
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+				    	</form>
+				    	</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- this is the pop modal for the update asset form -->
+	<div class="modal" id="updateItemForm" tabindex="-1" role="dialog" aria-labelledby="updateItemForm">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				
+				<!-- this is the body where the forms lies within the form pop-up modal -->
+				<div class="modal-body">
+					<div id="updateItemForm" class="row">
+						<center>
+						<!-- this is form for create an item -->
+						<form id = "update-asset-form">
+
+							<div class="form-group">
+								<label for="itemName">
+								Category</label>
+								<select name="category" id="updateCategory">
+									<option value="Appliances">Appliances</option>
+									<option value="Electronics">Electronics</option>
+									<option value="Tools">Tools</option>
+									<option value="Vehicles">Vehicles</option>
+									<option value="Antiques/Artworks">Antiques/ Artworks</option>
+									<option value="Clothing/Bags">Clothing/ Bags</option>
+									<option value="Jewerly/Watches">Jewerly/ Watches</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							
+				    		<div class="form-group">
+								<label for="itemName">Item Name</label>
+								<input class="form-control" id="updateItemName" placeholder="itemName">
+							</div>
+								    
+							<div class="form-group">
+								<label for="Manufacturer/ Brand">Make</label>
+								<input class="form-control" id="updateMake" placeholder="Manufacturer/ Brand">
+							</div>
+
+							<div class="form-group">
+								<label for="modelNumber">Model</label>
+								<input class="form-control" id="updateModel" placeholder="Model">
+							</div>
+							
+							<div class="form-group">
+								<label for="serialNumber">Serial Number</label>
+								<input class="form-control" id="updateSerialNumber" placeholder="serialNumber">
+							</div>
+								   
+							<div class="form-group">
+								<label for="price">Price</label>
+								<input class="form-control" id="updatePrice" placeholder="price">
+							</div>
+
+							<div class="form-group">
+								<label for="datePurchased">Date Purchased</label>
+								<input class="form-control" id="updateDate" placeholder="YYYY-MM-DD">
+							</div>
+
+							<div class="form-group">
+								<label for="addInfo">Additional Information</label>
+								<textarea class="form-control" rows="3" id="updateItemInfo"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="inherit">Who Inherits</label>
+								<input class="form-control" id="updateinherit" placeholder="inherit">
+							</div>
+
+							<div class="form-group">
+								<label for="image">Image</label>
+								<input class="form-control" id="image" placeholder="image">
+							</div>
+
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+				    	</form>
+				    	</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- this is the pop modal for the add an insurance form -->
+	<div class="modal" id="insuranceInfoForm" tabindex="-1" role="dialog" aria-labelledby="insuranceInfoForm">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<center>
+	        			<h4 class="modal-title" id="insuranceInfoForm">Add Insurance</h4>
+	        		</center>
+				</div>
+				
+				<!-- this is the body where the forms lies within the form pop-up modal -->
+				<div class="modal-body">
+					<div id="insuranceInfoForm" class="row">
+						<center>
+						<!-- this is form for create an item -->
+						<form id="insurance-form">
+				    		<div class="form-group">
+								<label for="insur_type">Insurance Type</label>
+								<input class="form-control" id="insur_type" placeholder="Insurance Type">
+							</div>
+
+							<div class="form-group">
+								<label for="Company">Company Name</label>
+								<input class="form-control" id="companyName" placeholder="Company">
+							</div>
+								    
+							<div class="form-group">
+								<label for="phone_num">Phone Number</label>
+								<input class="form-control" id="phone_num" placeholder="phone_num">
+							</div>
+
+							<div class="form-group">
+								<label for="agent">Agent</label>
+								<input class="form-control" id="agent" placeholder="Agent">
+							</div>
+
+							<div class="form-group">
+								<label for="policyNum">Policy Number</label>
+								<input class="form-control" id="policyNum" placeholder="Policy Number">
+							</div>
+
+							<div class="form-group">
+								<label for="startDate">Start Date</label>
+								<input class="form-control" id="startDate" placeholder="YYYY-MM-DD">
+							</div>
+							
+							<div class="form-group">
+								<label for="addInfo">Additional Information</label>
+								<textarea class="form-control" rows="3" id="insurInfo"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="image">Image</label>
+								<input class="form-control" id="image" placeholder="image">
+							</div>
+
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+				    	</form>
+				    	</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- this is the pop modal for the add an location form -->
+	<div class="modal" id="locationInfoForm" tabindex="-1" role="dialog" aria-labelledby="locationInfoForm">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- this is the header title for the create an item form pop-up modal-->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<center>
+	        			<h4 class="modal-title" id="locationInfoForm">Add location</h4>
+	        		</center>
+				</div>
+				
+				<!-- this is the body where the forms lies within the form pop-up modal -->
+				<div class="modal-body">
+					<div id="locationInfoForm" class="row">
+						<center>
+						<!-- this is form for create an item -->
+						<form id="location-form">
+				    		<div class="form-group">
+								<label for="locate_type">Location Name</label>
+								<input class="form-control" id="locate_type" placeholder="location Type">
+							</div>
+
+							<div class="form-group">
+								<label for="street">Street Name</label>
+								<input class="form-control" id="streetName" placeholder="street">
+							</div>
+								    
+							<div class="form-group">
+								<label for="phoneNum">City Name</label>
+								<input class="form-control" id="phoneNum" placeholder="Phone Number">
+							</div>
+
+							<div class="form-group">
+								<label for="state">State</label>
+								<input class="form-control" id="state" placeholder="state">
+							</div>
+
+							<div class="form-group">
+								<label for="zip_code">Zip Code</label>
+								<input class="form-control" id="zip_code" placeholder="zip_code">
+							</div>
+
+							<div class="form-group">
+								<label for="phone_num">Phone Number</label>
+								<input class="form-control" id="phone_num" placeholder="phone_num">
+							</div>
+							
+							<div class="form-group">
+								<label for="bought">Date Bought</label>
+								<input class="form-control" id="bought" placeholder=""YYYY-MM-DD"">
+							</div>
+
+							<div class="form-group">
+								<label for="price">Price Paid</label>
+								<input class="form-control" id="price" placeholder="price">
+							</div>
+
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+				    	</form>
+				    	</center>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/assetTable.js"></script>
+	<script type="text/javascript" src="assets/js/locationTable.js"></script>
+	<script type="text/javascript" src="assets/js/insuranceTable.js"></script>
+	<script type="text/javascript" src="assets/js/belongings.js"></script>
+
+</body>
+</html>
