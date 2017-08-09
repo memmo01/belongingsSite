@@ -83,10 +83,14 @@ $(".appliances").on("click", function(){
       newItemRow.data("asset", asset);
 
       var newIndex = $("<td>");
+      newIndex.addClass("something");
       newIndex.text(asset.id);
+      newIndex.data("asset", asset);
       newItemRow.append(newIndex);
 
       var newAsset = $("<td>");
+      newAsset.addClass("something");
+      newAsset.data("asset",asset);
       newAsset.text(asset.itemName);
       newItemRow.append(newAsset);
 
@@ -96,10 +100,10 @@ $(".appliances").on("click", function(){
       newLinksRow.attr("id", "manageLinks")
       newLinkRowContainer.append(newLinksRow);
 
-      var editIcon = $("<span>");
-      editIcon.addClass("glyphicon glyphicon-pencil itemEdit");
-      editIcon.attr("aria-hidden", "true");
-      newLinksRow.append(editIcon);
+      // var editIcon = $("<span>");
+      // editIcon.addClass("glyphicon glyphicon-pencil itemEdit");
+      // editIcon.attr("aria-hidden", "true");
+      // newLinksRow.append(editIcon);
 
       var deleteIcon = $("<span>");
       deleteIcon.addClass("glyphicon glyphicon-remove itemRemove");
@@ -261,6 +265,28 @@ function clothingQuery(){
 
 
 
+$(document).on("click", ".itemRemove", deleteAsset);
+
+  //function to remove asset from the database
+  function deleteAsset() {
+    var id = $(this).data("id");
+
+    $.ajax({
+      method: "DELETE",
+      url: "/api/assets/" + id
+    }).done(function(){
+
+      alert("item deleted");
+      toolsQuery();
+      appliancesQuery();
+      jewelryQuery();
+      carQuery();
+      electronicsQuery();
+      clothingQuery();
+      antiquesQuery();
+    });
+  }
+
 
 
 
@@ -302,7 +328,9 @@ function clothingQuery(){
       serial_num: $("#serialNumber").val().trim(),
       bought: $("#date").val().trim(),
       price: $("#price").val().trim(),
-      info: $("#itemInfo").val().trim()
+      info: $("#itemInfo").val().trim(),
+      inherit: $("#updateinherit").val().trim(),
+      image: $("#image").val().trim()
     };
    
 
@@ -319,6 +347,8 @@ function clothingQuery(){
     $("#date").val("");
     $("#price").val("");
     $("#itemInfo").val("");
+    $("#updateinherit").val("");
+      $("#image").val("");
   }
 
 $(".close").on("click",function(){
@@ -326,7 +356,7 @@ $(".close").on("click",function(){
 })
 
 
-  $(document).on("click", ".itemRowClick", fullAssestDisplay);
+  $(document).on("click", ".something", fullAssestDisplay);
 
   // function fullAssestDisplay(){
   //   var t = [];
@@ -345,10 +375,10 @@ $(".close").on("click",function(){
 
 
     var categoryTag = $("<h5>");
-    categoryTag.text("Category:");
+    categoryTag.text("Item:");
     var categoryText = $("<div>");
     categoryText.attr("id", "displayCategory");
-    categoryText.text(thisAsset.category);
+    categoryText.text(thisAsset.itemName);
     categoryTag.append(categoryText);
     items.append(categoryTag);
 
@@ -424,7 +454,7 @@ $(".close").on("click",function(){
     var pictureTag= $("<h5>");
     pictureTag.text("picture of item:");
     var pictureImg= $("<br><br>"+"<img>");
-    pictureImg.attr("src", thisAsset.itemPicture);
+    pictureImg.attr("src", thisAsset.image);
     pictureImg.attr("height", "300px");
     pictureTag.append(pictureImg);
     items.append(pictureTag);

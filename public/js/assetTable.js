@@ -39,11 +39,13 @@ $(document).ready(function(){
       newItemRow.addClass("itemRowClick");
       newItemRow.data("asset", asset);
 
-      var newIndex = $("<td>");
+      var newIndex = $("<span>");
+      newIndex.addClass("something");
       newIndex.text(asset.id);
       newItemRow.append(newIndex);
 
-      var newAsset = $("<td>");
+      var newAsset = $("<span>");
+      newAsset.addClass("somthing");
       newAsset.text(asset.itemName);
       newItemRow.append(newAsset);
 
@@ -76,14 +78,11 @@ $(document).ready(function(){
   //code to display full asset information when asset row is clicked
   //=================================================================
   //=================================================================
-  $(document).on("click", ".itemRowClick", fullAssestDisplay);
+  $(document).on("click", ".something", fullAssestDisplay);
   $(document).on("click", "#closeItemDetail", emptyAssets);
-  $(document).on("click", ".proper", runThis);
 
-  function runThis(){
-    var t= $("<h4>");
-    t.text("this is working surprisingly");
-  }
+
+ 
 
   var items = $(".items");
 
@@ -213,6 +212,7 @@ $(document).ready(function(){
 
   // This function handles showing the form for a user to edit an asset
   function editAsset() {
+    alert("hi");
     var currentAsset = $(this).data("asset");
     
     $("#updateCategory").val(currentAsset.category);

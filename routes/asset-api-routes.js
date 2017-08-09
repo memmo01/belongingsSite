@@ -28,7 +28,7 @@ app.get("/api/assets", function(req, res){
 
 		}).then(function(assets){
 			
-			res.json(dbAsset);
+			res.json(assets);
 		});
 	});
 	
@@ -50,7 +50,7 @@ app.get("/api/assets", function(req, res){
 		{
 			where: {id: req.body.id}
 		}).then(function(assets){
-			res.json(dbAsset);
+			res.json(assets);
 		});
 	});
 
@@ -59,7 +59,7 @@ app.get("/api/assets", function(req, res){
 		db.Asset.destroy({
 			where: {id: req.params.id}
 		}).then(function(assets){
-			res.json(dbAsset);
+			res.json(assets);
 		});
 	});
 }
