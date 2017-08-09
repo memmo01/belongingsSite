@@ -24,11 +24,11 @@ $(document).ready(function(){
     $("#itemDetail").hide();
   });
 
-	$(document).on('click','.itemRowClick',function(){
-		$("#itemDetail").toggle("blind", 1000);
-		nav.style.opacity = 0.25;
-		$("#displayItemName").empty();
-	});
+	// $(document).on('click','.itemRowClick',function(){
+	// 	$("#itemDetail").toggle("blind", 1000);
+	// 	nav.style.opacity = 0.25;
+	// 	$("#displayItemName").empty();
+	// });
 
 	$("#closeItemDetail").click(function(){
 		$("#itemDetail").hide();
@@ -321,16 +321,30 @@ function clothingQuery(){
     $("#itemInfo").val("");
   }
 
+$(".close").on("click",function(){
+  items.empty();
+})
 
 
   $(document).on("click", ".itemRowClick", fullAssestDisplay);
 
+  // function fullAssestDisplay(){
+  //   var t = [];
+  //   var thisAsset = $(this).data("asset");
+  //   t.push(thisAsset.itemName);
+  //   console.log(thisAsset.itemName);
+  //   modal-content.append(t);
+  // }
+  items = $(".items");
+
    function fullAssestDisplay(){
     
     var thisAsset = $(this).data("asset");
-   
+   console.log(thisAsset.id);
+   items.empty()
 
-    var categoryTag = $("<h4>");
+
+    var categoryTag = $("<h5>");
     categoryTag.text("Category:");
     var categoryText = $("<div>");
     categoryText.attr("id", "displayCategory");
@@ -341,7 +355,7 @@ function clothingQuery(){
     var break1 = $("<br>");
     items.append(break1);
 
-    var makeTag = $("<h4>");
+    var makeTag = $("<h5>");
     makeTag.text("Manufacturer/Brand:");
     var makeText = $("<div>");
     makeText.attr("id", "displayMake");
@@ -352,7 +366,7 @@ function clothingQuery(){
     var break2 = $("<br>");
     items.append(break2);
 
-    var modelTag = $("<h4>");
+    var modelTag = $("<h5>");
     modelTag.text("Model:");
     var modelText = $("<div>");
     modelText.attr("id", "displayModel");
@@ -363,7 +377,7 @@ function clothingQuery(){
     var break3 = $("<br>");
     items.append(break3);
 
-    var serialNumTag = $("<h4>");
+    var serialNumTag = $("<h5>");
     serialNumTag.text("Serial Number:");
     var serialNumText = $("<div>");
     serialNumText.attr("id", "displaySerialNum");
@@ -374,7 +388,7 @@ function clothingQuery(){
     var break4 = $("<br>");
     items.append(break4);
 
-    var priceTag = $("<h4>");
+    var priceTag = $("<h5>");
     priceTag.text("Price:");
     var priceText = $("<div>");
     priceText.attr("id", "displayPrice");
@@ -385,7 +399,7 @@ function clothingQuery(){
     var break5 = $("<br>");
     items.append(break5);
 
-    var datePurchasedTag = $("<h4>");
+    var datePurchasedTag = $("<h5>");
     datePurchasedTag.text("Date Purchased:");
     var datePurchasedText = $("<div>");
     datePurchasedText.attr("id", "displayDatePurchased");
@@ -396,7 +410,7 @@ function clothingQuery(){
     var break6 = $("<br>");
     items.append(break6);
 
-    var infoTag = $("<h4>");
+    var infoTag = $("<h5>");
     infoTag.text("Additional Comments:");
     var infoText = $("<div>");
     infoText.attr("id", "displayInfo");
@@ -407,7 +421,7 @@ function clothingQuery(){
     var break7 =$("<br>");
     items.append(break7);
 
-    var pictureTag= $("<h4>");
+    var pictureTag= $("<h5>");
     pictureTag.text("picture of item:");
     var pictureImg= $("<br><br>"+"<img>");
     pictureImg.attr("src", thisAsset.itemPicture);
