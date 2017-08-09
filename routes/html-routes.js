@@ -34,6 +34,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../views/about.html"));
   });
 
+  app.get("/contact", function(req, res) {
+    // If the user already has an account send them to the junkDrawer page
+  
+    res.sendFile(path.join(__dirname + "/../views/contactus.html"));
+  });
+
   app.get("/team", function(req, res) {
     // If the user already has an account send them to the junkDrawer page
   

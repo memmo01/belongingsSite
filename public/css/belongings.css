@@ -26,9 +26,9 @@ h3 {
 	background-color: transparent;
 }
 
-#polaroid {
+#polaroid h4{
 	font-family: 'Homemade Apple', cursive;
-	color: rgb(53,112,232);
+
 }
 
 /* this is styling the div which pops up when the create account button is clicked on the homepage */
